@@ -1,5 +1,7 @@
 package com.example.calculadoradenotas
 
+import android.graphics.Color.GREEN
+import android.graphics.Color.RED
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -20,9 +22,12 @@ class MainActivity : AppCompatActivity() {
             var notaFinal = (nota1 + nota2)/2
             if (notaFinal >= 7 && faltas in 0..10){
                 resultado.setText("Aluno Aprovado!\nNota Final: $notaFinal Faltas: $faltas")
+                resultado.setTextColor(GREEN)
+
             }
             else{
                 resultado.setText("Aluno Reprovado!")
+                resultado.setTextColor(RED)
             }
         }
     }
